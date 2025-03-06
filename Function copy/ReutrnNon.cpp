@@ -67,13 +67,46 @@ float CalPay(){
 }
 
 void DisplayItem(){
-      
+    cout<<"Item Name: "<<name<<endl;
+    cout<<"Item ID: "<<id<<endl;
+    cout<<"Item Quantity: "<<qty<<endl;
+    cout<<"Item Price: $"<<price<<endl;
+    cout<<"Total Price: $"<<CalTotal()<<endl;
+    cout<<"Tax: $"<<CalTax()<<endl;
+    cout<<"Discount: "<<CalDis()<<endl;
+    cout<<"Payment: $"<<CalPay()<<endl;
+    
 }
 
 int main(){
     system("cls");
-    
+    int options;
+    do{
+        cout<<"============[Please Choose an Option]================"<<endl;
+        cout<<"1. Input Item"<<endl;
+        cout<<"2. Display Item"<<endl;
+        cout<<"0. Exit"<<endl;
+        cout<<"Enter your choice: ";
+        cin>>options;
+        switch(options){
+            case 1 : {
+                cout<<"========================[Input Item]======================="<<endl;
+                InputItem();
+                break;
+            }
+            case 2 : {
+                cout<<"========================[Display Item]======================="<<endl;
+           
+                DisplayItem();
+                break;
+            }
+            case 0 : {
+                cout<<"=========================Goodbye!======================="<<endl;
+                return 0;
+            }
+        }
 
+    }while(options != 0);
 
     return 0;
 
