@@ -244,6 +244,7 @@ void AddPhone(){
 
 void Sort(){
 	int op;
+	string n_code;
 	check = false;
 	cout<<"================================"<<endl;
 	cout<<"1.Sort by code"<<endl;
@@ -272,7 +273,30 @@ void Sort(){
 			
 			break;
 		}
+		
+		case 2 :{
+			for(int i=0;i<Size;i++){ 
+				for(int j=i+1;j<Size;j++){ 
+					if(name[i]>name[j]){ 
+						swap(code[i],code[j]);
+						swap(name[i],name[j]);
+						swap(desc[i],desc[j]);
+						swap(type[i],type[j]);
+						swap(price[i],price[j]);
+						swap(qty[i],qty[j]);
+						check = true;
+					}
+				}
+			}
+			if(!check){
+				cout<<"Sort Not Success!!!"<<endl;
+			}else{
+				cout<<"Sort Is Complate!!"<<endl;
+			}	
+			break;
+		}
 	}
+	
 }
 
 
