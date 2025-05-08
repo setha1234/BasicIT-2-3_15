@@ -288,8 +288,8 @@ int main(){
             }
             case 5 : {
                 int sort_detail;
-                cout<<"| 1. Sort by id [ 1 - 100 ]"<<endl;
-                cout<<"| 2. Sort by id [ 100 - 1]"<<endl;
+                cout<<"| 1. Sort by id [1-100]"<<endl;
+                cout<<"| 2. Sort by id [100-1]"<<endl;
                 cout<<"| 3. Sort by name [A-Z]"<<endl;
                 cout<<"| 4. Sort by name [Z-A]"<<endl;
                 cout<<"| => Chose for sort : ";cin>>sort_detail;
@@ -334,6 +334,10 @@ int main(){
                         }
                     }
                     break;
+                }
+                    
+                
+                
                 }
             }
         }
